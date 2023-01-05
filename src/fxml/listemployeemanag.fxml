@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="523.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutY="42.0" prefHeight="67.0" prefWidth="523.0" style="-fx-background-color: #A5F1DA;">
+         <children>
+            <Label layoutX="14.0" layoutY="17.0" prefHeight="33.0" prefWidth="270.0" text="LISTE DES EMPLOYEES">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TableView focusTraversable="false" layoutX="-1.0" layoutY="111.0" prefHeight="368.0" prefWidth="523.0">
+        <columns>
+          <TableColumn prefWidth="145.0" text="Nom" />
+          <TableColumn prefWidth="144.0" text="Prénom" />
+            <TableColumn prefWidth="111.0" text="Metier" />
+            <TableColumn prefWidth="122.0" text="Salire" />
+        </columns>
+      </TableView>
+   </children>
+</Pane>

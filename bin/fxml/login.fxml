@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="452.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllerlogin">
+   <children>
+      <ImageView fitHeight="453.0" fitWidth="462.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@316199246_434938188838810_288458602961975688_n.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="nom" focusTraversable="false" layoutX="130.0" layoutY="176.0" prefHeight="34.0" prefWidth="179.0" promptText="entrer votre nom">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="password" focusTraversable="false" layoutX="130.0" layoutY="234.0" prefHeight="34.0" prefWidth="179.0" promptText="entrer le mot de passe">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </PasswordField>
+      <Button fx:id="login" layoutX="265.0" layoutY="385.0" mnemonicParsing="false" onAction="#openhome" prefHeight="34.0" prefWidth="72.0" style="-fx-background-color: #63ae83;" text="Login" textFill="WHITE" />
+      <ImageView fitHeight="79.0" fitWidth="113.0" layoutX="339.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@316130948_511480741005979_839454995650464294_n.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="119.0" layoutY="56.0" prefHeight="91.0" prefWidth="113.0" text="Para" textFill="#63ae83">
+         <font>
+            <Font name="Bookman Old Style" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="235.0" layoutY="67.0" prefHeight="34.0" prefWidth="89.0" text="Vie" textFill="#7ffac3">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="metier" layoutX="133.0" layoutY="292.0" prefHeight="25.0" prefWidth="173.0" promptText="admin">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </ComboBox>
+   </children>
+</AnchorPane>

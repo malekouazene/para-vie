@@ -11,8 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="523.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="523.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.controllerlistemedadmin">
    <children>
       <Pane layoutY="42.0" prefHeight="67.0" prefWidth="523.0" style="-fx-background-color: #A5F1DA;">
          <children>
@@ -40,22 +39,23 @@
             <RowConstraints maxHeight="54.0" minHeight="0.0" prefHeight="1.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <TextField prefHeight="29.0" prefWidth="456.0" promptText="| rechercher" style="-fx-background-color: #ffffff;" GridPane.columnSpan="6">
+            <TextField fx:id="txtsearch" prefHeight="29.0" prefWidth="456.0" promptText="| rechercher" style="-fx-background-color: #ffffff;" GridPane.columnSpan="7">
                <font>
                   <Font size="13.0" />
                </font>
             </TextField>
             <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="163.0" style="-fx-background-color: #6cc9a6;" text="Ajouter" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="163.0" style="-fx-background-color: #6cc9a6;" text="Modifier" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="47.0" style="-fx-background-color: #6cc9a6;" text="Rech" GridPane.columnIndex="6" />
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #6cc9a6;" text="Enregistrer" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-            <TableView prefHeight="231.0" prefWidth="439.0" GridPane.columnSpan="7" GridPane.rowIndex="1">
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #6cc9a6;" text="Supprimer" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <TableView fx:id="tablemed" prefHeight="231.0" prefWidth="439.0" GridPane.columnSpan="7" GridPane.rowIndex="1">
                <columns>
-                  <TableColumn prefWidth="62.0" text="Numero" />
-                  <TableColumn prefWidth="110.0" text="Nom" />
-                  <TableColumn prefWidth="108.0" text="Type" />
-                  <TableColumn prefWidth="113.0" text="Date expriration " />
-                  <TableColumn prefWidth="129.0" text="Date fabrication" />
+                  <TableColumn fx:id="clnnum" prefWidth="33.0" text="Num" />
+                  <TableColumn fx:id="clnnom" prefWidth="109.0" text="Nom" />
+                  <TableColumn fx:id="clntype" prefWidth="95.0" text="Type" />
+                  <TableColumn fx:id="clndosage" prefWidth="46.0" text="Dosage" />
+                  <TableColumn fx:id="clndateexp" prefWidth="93.0" text="Date expiration" />
+                  <TableColumn fx:id="clndatefab" prefWidth="99.0" text="Date fabrication" />
+                  <TableColumn fx:id="clnprix" prefWidth="54.0" text="Prix" />
                </columns>
             </TableView>
          </children>

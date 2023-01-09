@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -11,8 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="523.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="523.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.controllerlistemedvendeur">
    <children>
       <Pane layoutY="42.0" prefHeight="67.0" prefWidth="523.0" style="-fx-background-color: #A5F1DA;">
          <children>
@@ -23,26 +21,38 @@
             </Label>
          </children>
       </Pane>
-      <GridPane layoutY="109.0" prefHeight="371.0" prefWidth="523.0">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="482.0" minWidth="10.0" prefWidth="476.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="251.0" minWidth="10.0" prefWidth="47.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints maxHeight="118.0" minHeight="0.0" prefHeight="32.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="343.0" minHeight="10.0" prefHeight="337.0" vgrow="SOMETIMES" />
-        </rowConstraints>
+      <GridPane layoutY="109.0" prefHeight="376.0" prefWidth="523.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="525.0" minWidth="10.0" prefWidth="123.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="525.0" minWidth="10.0" prefWidth="75.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="525.0" minWidth="10.0" prefWidth="15.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="525.0" minWidth="10.0" prefWidth="73.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="525.0" minWidth="0.0" prefWidth="14.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="525.0" minWidth="10.0" prefWidth="176.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="525.0" minWidth="0.0" prefWidth="47.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="142.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="409.0" minHeight="10.0" prefHeight="300.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="409.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="54.0" minHeight="0.0" prefHeight="1.0" vgrow="SOMETIMES" />
+         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="47.0" style="-fx-background-color: #6cc9a6;" text="Rech" GridPane.columnIndex="1" />
-            <TextField prefHeight="40.0" prefWidth="476.0" promptText="|" />
-            <TableView prefHeight="347.0" prefWidth="523.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
-              <columns>
-                <TableColumn prefWidth="57.0" text="Numero" />
-                <TableColumn prefWidth="114.0" text="Nom" />
-                  <TableColumn prefWidth="114.0" text="Type" />
-                  <TableColumn prefWidth="121.0" text="Date expiration" />
-                  <TableColumn prefWidth="116.0" text="Date fabrication" />
-              </columns>
+            <TextField fx:id="txtsearch" prefHeight="29.0" prefWidth="456.0" promptText="| rechercher" style="-fx-background-color: #ffffff;" GridPane.columnSpan="7">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <TableView fx:id="tablemed" prefHeight="231.0" prefWidth="439.0" GridPane.columnSpan="7" GridPane.rowIndex="1" GridPane.rowSpan="2">
+               <columns>
+                  <TableColumn fx:id="clnnum" prefWidth="33.0" text="Num" />
+                  <TableColumn fx:id="clnnom" prefWidth="109.0" text="Nom" />
+                  <TableColumn fx:id="clntype" prefWidth="95.0" text="Type" />
+                  <TableColumn fx:id="clndosage" prefWidth="46.0" text="Dosage" />
+                  <TableColumn fx:id="clndateexp" prefWidth="93.0" text="Date expiration" />
+                  <TableColumn fx:id="clndatefab" prefWidth="99.0" text="Date fabrication" />
+                  <TableColumn fx:id="clnprix" prefWidth="54.0" text="Prix" />
+               </columns>
             </TableView>
          </children>
       </GridPane>

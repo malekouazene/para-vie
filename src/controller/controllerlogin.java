@@ -1,14 +1,16 @@
 package controller;
 
+
 import java.io.IOException;
 import java.net.URL;
-import java.sql.*;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-import application.ConnexionMlysql;
+import application.connexionmysql;
+
+import java.sql.*;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -36,73 +38,76 @@ public class controllerlogin implements Initializable {
 
     @FXML
     private Button login;
-
+    
     @FXML
-    private ComboBox<String> metier;
+    private ComboBox<String> metier; 
     private String[] choix = { "admin", "manager", "vendeur" };
 
     @FXML
     private AnchorPane pane;
 
-    private Parent fxml;
-
+    private Parent fxml;  
     @FXML
     void openhome() {
         String nm = nom.getText();
         String pss = password.getText();
         String met = metier.getValue();
-        String sql = "SELECT * FROM `liste employées` ";
-        try {
-            stm = cnx.prepareStatement(sql);
-            result = stm.executeQuery();
-            if (result.next()) {
-                if (nm.equals(result.getString("nom")) && pss.equals(result.getString("mot de passe"))
-                        && met.equals(result.getString("métier"))) {
+        String sql="SELECT * FROM employees WHERE nom=? AND password=? AND metier=?";
+        try{
+            
+            stm=cnx.prepareStatement(sql);
+            stm.setString(1, nm);
+            stm.setString(2, pss);
+            stm.setString(3, met);
+           
 
-                    if (met.equals("manager")) {
+            result=stm.executeQuery();
+            if(result.next()){
+                if (nm.equals(result.getString("nom"))&& pss.equals(result.getString("password"))&& met.equals(result.getString("metier"))){
+                    if (met.equals("vendeur")) {
                         pane.getScene().getWindow().hide();
                         Stage home = new Stage();
                         try {
-                            fxml = FXMLLoader.load(getClass().getResource("/fxml/homemanager.fxml"));
+                            fxml = FXMLLoader.load(getClass().getResource("/FXML/homevendeur.fxml"));
                             Scene scene = new Scene(fxml);
                             home.setScene(scene);
                             home.show();
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
-                    } else {
-                        if (met.equals("vendeur")) {
+                    }else {
+                        if (met.equals("manager")) {
                             pane.getScene().getWindow().hide();
                             Stage home = new Stage();
                             try {
-                                fxml = FXMLLoader.load(getClass().getResource("/fxml/homevendeur.fxml"));
+                                fxml = FXMLLoader.load(getClass().getResource("/FXML/homemanager.fxml"));
                                 Scene scene = new Scene(fxml);
                                 home.setScene(scene);
                                 home.show();
                             } catch (IOException e) {
                                 e.printStackTrace();
                             }
-                        } else {
-                            if (met.equals("admin")) {
-                                pane.getScene().getWindow().hide();
-                                Stage home = new Stage();
-                                try {
-                                    fxml = FXMLLoader.load(getClass().getResource("/fxml/homeadmin.fxml"));
-                                    Scene scene = new Scene(fxml);
-                                    home.setScene(scene);
-                                    home.show();
-                                } catch (IOException e) {
-                                    e.printStackTrace();
+                        }else {if (met.equals("admin")){
+                                   pane.getScene().getWindow().hide();
+                                   Stage home = new Stage();
+                                   try {
+                                       fxml = FXMLLoader.load(getClass().getResource("/FXML/homeadmin.fxml"));
+                                       Scene scene = new Scene(fxml);
+                                       home.setScene(scene);
+                                       home.show();
+                                    } catch (IOException e) {
+                                        e.printStackTrace();
+                                    }
                                 }
-                            }
                         }
                     }
-                } else {
-                    Alert alert = new Alert(AlertType.ERROR, "le nom ou le mot de passe incorrect!", ButtonType.OK);
+                }else{
+                    Alert alert = new Alert(AlertType.ERROR,"le nom ou le mot de passe incorrect!",ButtonType.OK);
                     alert.showAndWait();
                 }
+                       
             }
-        } catch (SQLException e1) {
+        } catch(SQLException e1){
             e1.printStackTrace();
         }
     }
@@ -110,7 +115,7 @@ public class controllerlogin implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         metier.getItems().addAll(choix);
-        cnx = ConnexionMlysql.connexionBD();
-
+        cnx=connexionmysql.connexionDB();
     }
+    
 }

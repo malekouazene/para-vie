@@ -9,8 +9,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+
 
 public class controllerhomeadmin implements Initializable {
     Parent fxml;
@@ -18,9 +18,9 @@ public class controllerhomeadmin implements Initializable {
     private Pane root;
 
     @FXML
-    void listeemployer(MouseEvent event) {
+    void listeemployer() {
         try {
-            fxml = FXMLLoader.load(getClass().getResource("/fxml/listeemployeeadmin.fxml"));
+            fxml= FXMLLoader.load(getClass().getResource("/FXML/listeemployeeadmin.fxml"));
             root.getChildren().removeAll();
             root.getChildren().setAll(fxml);
         } catch (IOException e) {
@@ -29,9 +29,9 @@ public class controllerhomeadmin implements Initializable {
     }
 
     @FXML
-    void listemedadmin(MouseEvent event) {
+    void listemedadmin() {
         try {
-            fxml = FXMLLoader.load(getClass().getResource("/fxml/listemedadmin.fxml"));
+            fxml= FXMLLoader.load(getClass().getResource("/FXML/listemedadmin.fxml"));
             root.getChildren().removeAll();
             root.getChildren().setAll(fxml);
         } catch (IOException e) {
@@ -43,4 +43,5 @@ public class controllerhomeadmin implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
     }
 
+    
 }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -11,7 +12,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="523.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="523.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Pane layoutY="42.0" prefHeight="67.0" prefWidth="523.0" style="-fx-background-color: #A5F1DA;">
          <children>
@@ -22,16 +23,18 @@
             </Label>
          </children>
       </Pane>
-      <GridPane layoutX="14.0" layoutY="109.0" prefHeight="132.0" prefWidth="515.0">
+      <GridPane layoutX="14.0" layoutY="109.0" prefHeight="139.0" prefWidth="515.0">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="114.0" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="114.0" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="103.0" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="103.0" minWidth="10.0" prefWidth="100.0" />
          </columnConstraints>
          <rowConstraints>
             <RowConstraints maxHeight="47.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="52.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="81.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="52.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="81.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="81.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="81.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
@@ -47,22 +50,21 @@
             <TextField focusTraversable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <TextField focusTraversable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <TextField focusTraversable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label prefHeight="17.0" prefWidth="86.0" text="date de vente:" GridPane.rowIndex="4" />
+            <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="4" />
          </children>
       </GridPane>
-      <GridPane layoutX="14.0" layoutY="244.0" prefHeight="223.0" prefWidth="508.0">
+      <GridPane layoutX="13.0" layoutY="250.0" prefHeight="230.0" prefWidth="506.0">
          <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.0" minWidth="10.0" prefWidth="92.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="108.0" minWidth="10.0" prefWidth="108.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="174.0" minWidth="10.0" prefWidth="154.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="108.0" minWidth="10.0" prefWidth="62.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="108.0" minWidth="10.0" prefWidth="108.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="430.0" minWidth="10.0" prefWidth="332.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.0" minWidth="0.0" prefWidth="93.0" />
+            <ColumnConstraints maxWidth="120.0" minWidth="2.0" prefWidth="15.0" />
+            <ColumnConstraints maxWidth="120.0" minWidth="10.0" prefWidth="77.0" />
          </columnConstraints>
          <rowConstraints>
-            <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="83.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="95.0" minHeight="2.0" prefHeight="26.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="95.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="95.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="63.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="139.0" minHeight="10.0" prefHeight="139.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="95.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
             <Label prefHeight="22.0" prefWidth="126.0" text="vente:">
@@ -70,15 +72,16 @@
                   <Font name="Arial Black" size="12.0" />
                </font>
             </Label>
-            <TableView focusTraversable="false" prefHeight="122.0" prefWidth="349.0" GridPane.columnSpan="5" GridPane.rowIndex="1" GridPane.rowSpan="3">
-               <columns>
-                  <TableColumn prefWidth="145.0" text="nom de médicamentes" />
-                  <TableColumn prefWidth="118.0" text="type" />
-                  <TableColumn prefWidth="89.0" text="prix" />
-                  <TableColumn prefWidth="155.0" text="date de vente" />
-               </columns>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #6cc9a6;" text="Enregistrer" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <TableView prefHeight="139.0" prefWidth="426.0" GridPane.columnSpan="3" GridPane.rowIndex="1">
+              <columns>
+                <TableColumn prefWidth="157.0" text="nomde médicament" />
+                <TableColumn prefWidth="172.0" text="type" />
+                  <TableColumn prefWidth="107.0" text="prix" />
+              </columns>
             </TableView>
-            <Button focusTraversable="false" mnemonicParsing="false" prefHeight="26.0" prefWidth="98.0" style="-fx-background-color: #6cc9a6;" text="Enregistrer" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <TextField prefHeight="25.0" prefWidth="237.0" promptText="le prix totale" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="265.0" style="-fx-background-color: #e7e7e7;" text="Séléctionner des médicaments" GridPane.rowIndex="2" />
          </children>
       </GridPane>
    </children>

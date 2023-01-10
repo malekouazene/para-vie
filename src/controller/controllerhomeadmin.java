@@ -1,6 +1,8 @@
 package controller;
 
 
+
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -12,6 +14,7 @@ import javafx.scene.Parent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 
+
 public class controllerhomeadmin implements Initializable {
     Parent fxml;
     @FXML
@@ -20,7 +23,7 @@ public class controllerhomeadmin implements Initializable {
     @FXML
     void listeemployer(MouseEvent event) {
         try {
-            fxml = FXMLLoader.load(getClass().getResource("/fxml/listeemployeeadmin.fxml"));
+            fxml= FXMLLoader.load(getClass().getResource("/fxml/listeemployeeadmin.fxml"));
             root.getChildren().removeAll();
             root.getChildren().setAll(fxml);
         } catch (IOException e) {
@@ -31,7 +34,7 @@ public class controllerhomeadmin implements Initializable {
     @FXML
     void listemedadmin(MouseEvent event) {
         try {
-            fxml = FXMLLoader.load(getClass().getResource("/fxml/listemedadmin.fxml"));
+            fxml= FXMLLoader.load(getClass().getResource("/fxml/listemedadmin.fxml"));
             root.getChildren().removeAll();
             root.getChildren().setAll(fxml);
         } catch (IOException e) {
@@ -43,4 +46,5 @@ public class controllerhomeadmin implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
     }
 
+    
 }

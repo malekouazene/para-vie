@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.controllerhomeadmin">
+   <children>
+      <FlowPane prefHeight="488.0" prefWidth="157.0" style="-fx-background-color: #6cc9a6;">
+         <children>
+            <ImageView fitHeight="106.0" fitWidth="157.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../lg1.png" />
+               </image>
+            </ImageView>
+            <Button focusTraversable="false" mnemonicParsing="false" onMouseClicked="#listemedadmin" prefHeight="40.0" prefWidth="157.0" style="-fx-background-color: #6cc9a6;" text="Liste médicaments" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button focusTraversable="false" mnemonicParsing="false" onMouseClicked="#listeemployer" prefHeight="40.0" prefWidth="157.0" style="-fx-background-color: #6cc9a6;" text="Liste des employees" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button focusTraversable="false" mnemonicParsing="false" prefHeight="40.0" prefWidth="157.0" style="-fx-background-color: #6cc9a6;" text="Factures mensuelles" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button focusTraversable="false" mnemonicParsing="false" prefHeight="40.0" prefWidth="157.0" style="-fx-background-color: #6cc9a6;" text="Factures annuelles " textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </FlowPane>
+      <Pane fx:id="root" layoutX="157.0" prefHeight="480.0" prefWidth="523.0">
+         <children>
+            <Pane layoutY="42.0" prefHeight="67.0" prefWidth="523.0" style="-fx-background-color: #A5F1DA;">
+               <children>
+                  <Label layoutX="214.0" layoutY="17.0" prefHeight="33.0" prefWidth="96.0" text="PARAVIE" textFill="#313030">
+                     <font>
+                        <Font name="Arial Black" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
